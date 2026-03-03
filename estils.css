@@ -1,8 +1,33 @@
+:root{
+  --mida: 0;
+  --columnes: 0;
+  --files: 0;
+}
+
 .tabla{
     padding: 20rem;
     gap: 2px;
     display: flex;
     flex-wrap: wrap;
+    background:white;
+    border: 1px solid #111827;
+    border-radius: 8px;
+    height: calc(var(--mida) * var(--files));
+    overflow: hidden;
+    position:relative;
+    width: calc(var(--mida) * var(--columnes));
+}
+
+.casella{
+  align-items: center;
+  border-radius: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  height: var(--mida);
+  justify-content: center;
+  position: absolute;
+  user-select: none;
+  width: var(--mida);
 }
 
 #blanco{
