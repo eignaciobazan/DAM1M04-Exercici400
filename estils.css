@@ -4,3 +4,9 @@
     display: flex;
     flex-wrap: wrap;
 }
+
+#blanco{
+    display: none;
+    cursor: pointer;
+}
+
