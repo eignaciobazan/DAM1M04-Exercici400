@@ -10,16 +10,26 @@
   </head>
 
   <body>
-    <div class="tabla">
-        <img src="imatges/7.png" id="vacio" class="cuadrito" alt="">
-        <img src="imatges/1.png" id="vacio"  class="cuadrito" alt="">
-        <img src="imatges/3.png" id="vacio" class="cuadrito" alt="">
-        <img src="imatges/9.jpg" id="vacio" class="cuadrito">
-        <img src="imatges/2.png" id="vacio" class="cuadrito" alt="">
-        <img src="imatges/5.png" id="vacio" class="cuadrito" alt="">
-        <img src="imatges/4.png" id="vacio" class="cuadrito" alt="">
-        <img src="imatges/6.png" id="vacio" class="cuadrito" alt="">
-        <img src="imatges/8.png" id="vacio" class="cuadrito" alt="">
+    <div class="tabla" id="puzzle">
+      <img src="imatges/7.png" data-index="0" class="cuadrito" alt="7">
+      <img src="imatges/1.png" data-index="1" class="cuadrito" alt="1">
+      <img src="imatges/3.png" data-index="2" class="cuadrito" alt="3">
+      <img src="imatges/9.jpg" data-index="3" class="cuadrito empty" alt="9">
+      <img src="imatges/2.png" data-index="4" class="cuadrito" alt="2">
+      <img src="imatges/5.png" data-index="5" class="cuadrito" alt="5">
+      <img src="imatges/4.png" data-index="6" class="cuadrito" alt="4">
+      <img src="imatges/6.png" data-index="7" class="cuadrito" alt="6">
+      <img src="imatges/8.png" data-index="8" class="cuadrito" alt="8">
     </div>
+
+
+    <div style="text-align:center; margin-top:1rem;">
+      <button id="shuffleBtn">Mezclar</button>
+      <button id="resetBtn">Reiniciar</button>
+    <p id="message"></p>
+    </div>
+    
+
+
   </body>
 </html>
