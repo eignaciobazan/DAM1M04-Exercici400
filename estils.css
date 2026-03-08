@@ -17,7 +17,9 @@
     position:relative;
     width: calc(var(--mida) * var(--columnes));
 }
-
+.cuadrito{
+  max-height: 12rem;
+}
 .casella{
   align-items: center;
   border-radius: 50%;
