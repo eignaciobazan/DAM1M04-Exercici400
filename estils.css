@@ -3,7 +3,12 @@
   --columnes: 0;
   --files: 0;
 }
-
+.body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
 .tabla{
     padding: 10rem;
     gap: 2px;
