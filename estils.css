@@ -43,6 +43,21 @@
   pointer-events: none;
 }
 
+.contadorpuzzle{
+  display: flex;
+  flex-direction: row;
+  gap: 5rem;
+}
+
+.contador{
+  background-color: aqua;
+  margin-block: 2rem;
+  height: 10rem;
+  width: 10rem;
+  margin-right: -60rem;
+}
+
+
 
 
 
