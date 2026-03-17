@@ -84,7 +84,7 @@ function onTileClick(e) {
   if (isAdjacent(tileIndex, emptyIndex)) {
     swapTiles(tileIndex, emptyIndex);
     movecount++;
-    updatecount();
+    updateCounter();
     
     if (isSolved()) {
       message.textContent = '¡Felicidades! Puzzle resuelto.';
