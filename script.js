@@ -5,7 +5,8 @@ const puzzle = document.getElementById('puzzle');
 const message = document.getElementById('message');
 const shuffleBtn = document.getElementById('shuffleBtn');
 const resetBtn = document.getElementById('resetBtn');
-
+const contador = document.getElementById('count')
+let movescontador=0;
 // Inicializamos el tablero leyendo los elementos img
 let tiles = Array.from(puzzle.querySelectorAll('img'));
 
@@ -79,8 +80,14 @@ function onTileClick(e) {
   const tileIndex = getTileIndex(tile);
   const emptyIndex = getEmptyIndex();
 
+  
+
+
   if (isAdjacent(tileIndex, emptyIndex)) {
     swapTiles(tileIndex, emptyIndex);
+    movescontador++; //le aumentamos el valor
+    contador.textContent=`Movimientos:${movescontador}`;
+
     if (isSolved()) {
       message.textContent = '¡Felicidades! Puzzle resuelto.';
     } else {
