@@ -106,10 +106,10 @@ function shuffle(moves = 100) {
     const r = Math.floor(emptyIndex / COLS);
     const c = emptyIndex % COLS;
     const deltas = [
-      {dr: -1, dc: 0},
-      {dr: 1, dc: 0},
-      {dr: 0, dc: -1},
-      {dr: 0, dc: 1}
+      {dr: -1, dc: 0},//arriba
+      {dr: 1, dc: 0},//abajo 
+      {dr: 0, dc: -1},//izquierda
+      {dr: 0, dc: 1}//derecha
     ];
     deltas.forEach(d => {
       const nr = r + d.dr;
