@@ -57,6 +57,12 @@
   margin-right: -60rem;
 }
 
+.ocultar{
+  display:none
+}
+.desocultar{
+  display:block
+}
 
 
 

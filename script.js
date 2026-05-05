@@ -63,15 +63,18 @@ function swapTiles(i1, i2) {
 
 // Comprueba si el puzzle está resuelto
 function isSolved() {
-  // Definimos el orden objetivo por alt o por nombre de archivo
-  // Aquí asumimos que las imágenes correctas en orden son: 1,2,3,4,5,6,7,8,9
-  const correctOrder = ['0','1','2','3','4','5','6','7','8'];
+  // El orden correcto según tu HTML es del 1 al 9
+  const correctOrder = ['1','2','3','4','5','6','7','8','9'];
+  
   for (let i = 0; i < tiles.length; i++) {
-    // extraemos el número del alt (o del nombre de archivo)
-    const alt = tiles[i].alt.replace(/\D/g,''); // deja solo dígitos
-    if (alt !== correctOrder[i]) return false;
+    const alt = tiles[i].alt.trim(); 
+    if (alt !== correctOrder[i]) {
+      return false;
+    }
   }
-  return true;
+  
+  // Solo devolvemos true si se han hecho movimientos (para que no salga al cargar la página)
+  return movescontador > 0;
 }
 
 // Manejador de click en una pieza
@@ -90,8 +93,9 @@ function onTileClick(e) {
 
     if (isSolved()) {
       message.textContent = '¡Felicidades! Puzzle resuelto.';
+      message.className = 'desocultar'; // Cambiamos la clase para mostrarlo
     } else {
-      message.textContent = '';
+      message.className = 'ocultar'; // Aseguramos que esté oculto si no está resuelto
     }
   }
 }
